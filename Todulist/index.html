@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>待办事项清单</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="App">
+    <div class="addWrap">
+        <input id="addInput" type="text" placeholder="添 加 待 办 事 项 . . ." v-model="todo" @keypress="CheckInfo()">
+        <button id="addBtn" @click="addTodo()">添 加</button>
+    </div>
+
+    <h2>正在进行</h2>
+    <ul v-for="(item,index) in list" v-if="!item.done">
+        <li>
+            <input type="checkbox" v-model="item.done" @change="checkItem()">
+            <input class="textInput" type="text" v-model="item.todo" @blur="loseFocus()">
+            <button @click="Delete(index)">删 除</button>
+        </li>
+    </ul>
+
+    <h2>已经完成</h2>
+    <ul v-for="(item,index) in list" v-if="item.done">
+        <li>
+            <input type="checkbox" v-model="item.done" @change="checkItem()">
+            <input class="textInput" type="text" v-model="item.todo" @blur="loseFocus()">
+            <button @click="Delete(index)">删 除</button>
+        </li>
+    </ul>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>

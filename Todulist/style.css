@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("https://images4.alphacoders.com/103/1030265.jpg") no-repeat fixed;
+}
+
+.App{
+    width: 500px;
+    height: 200px;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+}
+
+.App .addWrap>#addInput{
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 4px solid #fff;
+    outline: none;
+    font-size: 35px;
+    padding: 10px 0;
+    width: 350px;
+}
+
+.App .addWrap>#addInput::placeholder{
+    color: #fff;
+}
+
+.App .addWrap>#addBtn{
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #02b875;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.App .addWrap>#addBtn:hover{
+    box-shadow: 0 0 15px black;
+    transition: 0.3s;
+}
+
+.App>h2{
+    color: #fff;
+}
+
+.App ul{
+    list-style: none;
+    background: rgba(0,0,0,0.3);
+    border-radius: 25px;
+    height: 35px;
+    padding-inline-start:0px;
+}
+
+.App ul li{
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    cursor: pointer
+}
+
+.App ul li .textInput{
+    border: none;
+    width: 350px;
+    height: 25px;
+    color: #fff;
+
+    font-size: 20px;
+    background: rgba(0,0,0,0.0);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.App ul li button{
+    border: none;
+    background-color: #ed292a;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: #fff;
+    outline: none;
+    cursor: pointer
+}
+
+.App ul li button:hover{
+    box-shadow: 0 0 10px black;
+    transition: 0.3s;
+}
+
+
+
